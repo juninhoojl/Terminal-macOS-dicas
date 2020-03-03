@@ -1,6 +1,6 @@
 # Algumas utilidades no Terminal do macOS
 
-###### juninhoojl
+###### by: juninhoojl
 
 ## Bloquear mudança de tamanho do dock
 
