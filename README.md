@@ -23,7 +23,7 @@ defaults write com.apple.Dock contents-immutable -bool yes; killall Dock
 ###### Para reverter:
 
 ```
-defaults write com.apple.Dock contents-immutable -bool yes; killall Dock
+defaults write com.apple.Dock contents-immutable -bool no; killall Dock
 ```
 
 
