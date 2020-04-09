@@ -1,6 +1,6 @@
 # Algumas utilidades no Terminal do macOS
 
-[José Luiz Corrêa Junior](https://github.com/juninhoojl)  - juninhopc@icloud.com 
+[José Luiz Corrêa Junior](https://github.com/juninhoojl)  - juninhopc@icloud.com
 
 # <a name="menu"></a> Acesso rápido
 
@@ -38,7 +38,7 @@ defaults write com.apple.Dock contents-immutable -bool yes; killall Dock
 ###### Para reverter:
 
 ```
-defaults write com.apple.Dock contents-immutable -bool yes; killall Dock
+defaults write com.apple.Dock contents-immutable -bool no; killall Dock
 ```
 
 
