@@ -1,8 +1,23 @@
 # Algumas utilidades no Terminal do macOS
 
-###### juninhoojl
+[José Luiz Corrêa Junior](https://github.com/juninhoojl)  - juninhopc@icloud.com 
 
-## Bloquear mudança de tamanho do dock
+# <a name="menu"></a> Acesso rápido
+
+* [**Bloquear mudança de tamanho do dock**](#dock-tamanho)
+* [**Bloquear alterações dock**](#dock-alterar)
+* [**Evitar que entre no modo suspender**](#suspender)
+* [**Alterar localização do screenshots**](#screenshot-loc)
+* [**Mudar formato dos screenshots**](#screenshot-formato)
+* [**Gitignore global útil macOS**](#gitignore-global)
+* [**Mostrar arquivos ocultos no fider**](#arquivo-oculto)
+* [**Remover sombra do screenshot**](#screenshot-sombra)
+* [**Habilitar a seleção de textos no quicklook**](#selecao-quicklook)
+* [**Desativar o Dashboard**](#desabilitar-dashboard)
+* [**Habilitar o autohide Menu Bar**](#habilitar-autohide)
+
+
+## <a name="dock-tamanho"></a> Bloquear mudança de tamanho do dock [**&#x2B06; Menu**](#menu)
 
 ```
 defaults write com.apple.Dock size-immutable -bool yes; killall Dock
@@ -14,7 +29,7 @@ defaults write com.apple.Dock size-immutable -bool yes; killall Dock
 defaults write com.apple.Dock size-immutable -bool no; killall Dock
 ```
 
-## Bloquear alterações dock
+## <a name="dock-alterar"></a> Bloquear alterações dock [**&#x2B06; Menu**](#menu)
 
 ```
 defaults write com.apple.Dock contents-immutable -bool yes; killall Dock
@@ -27,7 +42,7 @@ defaults write com.apple.Dock contents-immutable -bool yes; killall Dock
 ```
 
 
-## Evitar que entre no modo suspender
+## <a name="suspender"></a> Evitar que entre no modo suspender [**&#x2B06; Menu**](#menu)
 
 ```
 caffeinate
@@ -43,7 +58,7 @@ caffeinate -u -t 1800
 ```
 (o tempo é dado em segundos, logo, 1800 -> 30 minutos)
 
-## Alterar localização do screenshots
+## <a name="screenshot-loc"></a> Alterar localização do screenshots [**&#x2B06; Menu**](#menu)
 
 Ps. Substitua <LOCATION> pelo diretório que deseja salvar as capturas de tela:
 
@@ -59,7 +74,7 @@ defaults write com.apple.screencapture location <LOCATION>; killall SystemUIServ
 defaults write com.apple.screencapture location ~/Documents; killall SystemUIServer
 ```
 
-## Mudar formato dos screenshots
+## <a name="screenshot-formato"></a> Mudar formato dos screenshots [**&#x2B06; Menu**](#menu)
 
 **Para jpg:**
 
@@ -84,7 +99,7 @@ defaults write com.apple.screencapture type tiff
 defaults write com.apple.screencapture type gif
 ```
 
-## Gitignore global útil macOS
+## <a name="gitignore-global"></a> Gitignore global útil macOS [**&#x2B06; Menu**](#menu)
 
 Utilizando os seguintes comandos adicione no .gitignore_global do seu sistema:
 
@@ -106,7 +121,7 @@ Ou simplesmente adicione as seguintes linhas no arquivo `~/Git/.gitignore_global
 ```
 
 
-## Mostrar arquivos ocultos no fider:
+## <a name="arquivo-oculto"></a> Mostrar arquivos ocultos no fider [**&#x2B06; Menu**](#menu)
 
 ```
 defaults write com.apple.Finder AppleShowAllFiles true; killall Finder
@@ -121,7 +136,7 @@ defaults write com.apple.Finder AppleShowAllFiles false; killall Finder
 ```
 
 
-## Remover sombra do screenshot:
+## <a name="screenshot-sombra"></a> Remover sombra do screenshot [**&#x2B06; Menu**](#menu)
 
 ```
 defaults write com.apple.screencapture disable-shadow -bool TRUE; killall SystemUIServer
@@ -133,8 +148,7 @@ defaults write com.apple.screencapture disable-shadow -bool TRUE; killall System
 defaults write com.apple.screencapture disable-shadow -bool FALSE; killall SystemUIServer
 ```
 
-## Habilitar a seleção de textos no quicklook 
-
+## <a name="selecao-quicklook"></a> Habilitar a seleção de textos no quicklook [**&#x2B06; Menu**](#menu)
 
 ```
 defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
@@ -145,7 +159,7 @@ defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
 defaults write com.apple.finder QLEnableTextSelection -bool FALSE; killall Finder
 ```
 
-## Desativar o Dashboard
+## <a name="desabilitar-dashboard"></a> Desativar o Dashboard [**&#x2B06; Menu**](#menu)
 
 ```
 defaults write com.apple.dashboard mcx-disabled -boolean TRUE; killall Dock
@@ -156,3 +170,15 @@ defaults write com.apple.dashboard mcx-disabled -boolean TRUE; killall Dock
 ```
 defaults write com.apple.dashboard mcx-disabled -boolean FALSE; killall Dock
 ```
+## <a name="habilitar-autohide"></a> Habilitar o autohide Menu Bar [**&#x2B06; Menu**](#menu)
+
+```
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+```
+
+###### Para reverter:
+
+```
+defaults write NSGlobalDomain _HIHideMenuBar -bool false
+```
+
