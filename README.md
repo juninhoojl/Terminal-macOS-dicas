@@ -191,4 +191,26 @@ Use authenticated restarts. fdesetup permits you to bypass the FileVault login s
 
 sudo fdesetup authrestart
 
+## Nao abrir music quando apertar play
+
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
+(Porem nao vao funcionar mais as teclas de media)
+
+reverter:
+
+launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
+## Sleep porem ativo 
+
+pmset displaysleepnow
+
+Script:
+
+-- Sleep Active
+do shell script "pmset displaysleepnow"
+
+
+
+
 
