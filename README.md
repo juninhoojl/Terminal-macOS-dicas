@@ -182,3 +182,13 @@ defaults write NSGlobalDomain _HIHideMenuBar -bool true
 defaults write NSGlobalDomain _HIHideMenuBar -bool false
 ```
 
+
+##### Conectar teclado bluetooth antes do login
+
+This definitely seems like a FileVault problem. The necessary drivers aren’t present in the pre-boot login screen. There’s two ways this could be solved:
+If such drivers are offered for FileVault, grab them from the manufacturer’s website.
+Use authenticated restarts. fdesetup permits you to bypass the FileVault login screen if you supply the necessary authentication info beforehand. To initiate an authenticated restart, save all of your work, log into an administrator account, then run the below command in Terminal:
+
+sudo fdesetup authrestart
+
+
