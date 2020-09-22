@@ -212,5 +212,12 @@ do shell script "pmset displaysleepnow"
 
 
 
+## .ZSHRC
+
+PROMPT='%{$fg[magenta]%}%n@%{$reset_color%}${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+
+
+
+
 
 
