@@ -217,6 +217,9 @@ do shell script "pmset displaysleepnow"
 PROMPT='%{$fg[magenta]%}%n@%{$reset_color%}${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
 
 
+## Alias Sublime
+
+sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 
 
