@@ -214,7 +214,14 @@ do shell script "pmset displaysleepnow"
 
 ## .ZSHRC
 
+Para mostrar nome e usuario adicione a seguinte linha no ~/.zshrc
+
 PROMPT='%{$fg[magenta]%}%n@%{$reset_color%}${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+
+Para resolver problema de permissoes:
+
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
 
 
 ## Alias Sublime
