@@ -229,5 +229,7 @@ chmod 755 /usr/local/share/zsh/site-functions
 sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 
+## Solucao gambiarra para permissoes do git ao altera usuario
 
+joseluizjunior@ ~ sudo chmod -R +rwx /Users/joseluizjunior/.config
 
