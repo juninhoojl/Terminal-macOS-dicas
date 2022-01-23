@@ -232,4 +232,13 @@ sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/
 ## Solucao gambiarra para permissoes do git ao altera usuario
 
 joseluizjunior@ ~ sudo chmod -R +rwx /Users/joseluizjunior/.config
-
+  
+## sudo nano /etc/ssh/ssh_config
+ENTER YOUR PASSWORD
+Locate the line ‘ #   MACs hmac-md5,hmac-sha1,hmac-sha2-256,umac-64@openssh.com,hmac-ripemd160′ and remove the Hash/Pound sight from the beginning, and add the extra hashing algorithm that I’ve shown above in red. 
+Locate the line ‘ #   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc’ and remove the Hash/Pound sight from the beginning.
+Then paste the following on the end;
+HostkeyAlgorithms ssh-dss,ssh-rsa
+KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group14-sha1
+  
+https://www.petenetlive.com/kb/article/0001245
